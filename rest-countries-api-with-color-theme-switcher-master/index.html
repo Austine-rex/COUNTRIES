@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="country-head">
+        <article class="question-theme">
+            <h3>Where in the World?</h3>
+
+            <div class="icon">
+                <figure class="moon-icon">
+                    <img src="./images/moon-regular-full.svg" alt="">
+                </figure>
+                <p class="dark">Dark Mode</p>
+              
+            </div>
+            
+        </article>
+    </header>
+
+    <main class="country-main">
+        <section class="bar">
+            <!-- <div class="searchBar">
+                <input type="text"
+                placeholder ="Search for a country..">
+
+                <select name="Region" id="#dropDown">
+                    
+                    <option value="Africa">
+                    Africa
+                    </option>
+                    <option value="America">
+                    America
+                    </option>
+                    <option value="Asia">
+                    Asia
+                    </option>
+                    <option value="Europe">
+                    Europe
+                    </option>
+                    <option value="Oceania">
+                    Oceania
+                    </option>
+                </select>
+            </div> -->
+            <form class="searchBar">
+                
+                <input type="text"
+                id="searchInput"
+                placeholder ="Search for a country..">
+
+               <select id="regionFilter">
+        <option value="all">Filter by Region</option>
+        <option value="Africa">Africa</option>
+        <option value="Americas">Americas</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="Oceania">Oceania</option>
+      </select>
+            </form>
+        </section>
+
+        <section class="country-info">
+            
+        </section>
+
+        <section class="country-details hidden">
+         <button class="back-btn"><img src="./images/arrow-left-solid-full.svg" alt="">Back</button>
+
+         <div class="details-container">
+
+         </div>
+        </section>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
