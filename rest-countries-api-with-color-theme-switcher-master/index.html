@@ -3,77 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Where in the World?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header class="country-head">
         <article class="question-theme">
-            <h3>Where in the World?</h3>
+            <h1 class="brand">Where in the World?</h1>
 
-            <div class="icon">
-                <figure class="moon-icon">
-                    <img src="./images/moon-regular-full.svg" alt="">
-                </figure>
-                <p class="dark">Dark Mode</p>
-              
-            </div>
-            
+            <button type="button" class="icon theme-toggle" aria-pressed="false" aria-label="Toggle dark mode">
+                <svg class="icon-moon" viewBox="0 0 384 512" aria-hidden="true">
+                    <path fill="currentColor" d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"/>
+                </svg>
+                <svg class="icon-sun" viewBox="0 0 512 512" aria-hidden="true">
+                    <path fill="currentColor" d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"/>
+                </svg>
+                <span class="dark">Dark Mode</span>
+            </button>
         </article>
     </header>
 
     <main class="country-main">
         <section class="bar">
-            <!-- <div class="searchBar">
-                <input type="text"
-                placeholder ="Search for a country..">
+            <form class="searchBar" role="search" onsubmit="return false">
+                <div class="search-field">
+                    <svg class="search-icon" viewBox="0 0 512 512" aria-hidden="true">
+                        <path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
+                    </svg>
+                    <input type="text"
+                        id="searchInput"
+                        aria-label="Search for a country"
+                        placeholder="Search for a country...">
+                </div>
 
-                <select name="Region" id="#dropDown">
-                    
-                    <option value="Africa">
-                    Africa
-                    </option>
-                    <option value="America">
-                    America
-                    </option>
-                    <option value="Asia">
-                    Asia
-                    </option>
-                    <option value="Europe">
-                    Europe
-                    </option>
-                    <option value="Oceania">
-                    Oceania
-                    </option>
-                </select>
-            </div> -->
-            <form class="searchBar">
-                
-                <input type="text"
-                id="searchInput"
-                placeholder ="Search for a country..">
-
-               <select id="regionFilter">
-        <option value="all">Filter by Region</option>
-        <option value="Africa">Africa</option>
-        <option value="Americas">Americas</option>
-        <option value="Asia">Asia</option>
-        <option value="Europe">Europe</option>
-        <option value="Oceania">Oceania</option>
-      </select>
+                <div class="select-field">
+                    <select id="regionFilter" aria-label="Filter by region">
+                        <option value="all">Filter by Region</option>
+                        <option value="Africa">Africa</option>
+                        <option value="Americas">Americas</option>
+                        <option value="Asia">Asia</option>
+                        <option value="Europe">Europe</option>
+                        <option value="Oceania">Oceania</option>
+                    </select>
+                    <svg class="chevron" viewBox="0 0 512 512" aria-hidden="true">
+                        <path fill="currentColor" d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                    </svg>
+                </div>
             </form>
         </section>
 
-        <section class="country-info">
-            
-        </section>
+        <section class="country-info" aria-live="polite"></section>
 
         <section class="country-details hidden">
-         <button class="back-btn"><img src="./images/arrow-left-solid-full.svg" alt="">Back</button>
+            <button type="button" class="back-btn">
+                <svg class="back-icon" viewBox="0 0 448 512" aria-hidden="true">
+                    <path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+                </svg>
+                Back
+            </button>
 
-         <div class="details-container">
-
-         </div>
+            <div class="details-container"></div>
         </section>
     </main>
     <script src="index.js"></script>
